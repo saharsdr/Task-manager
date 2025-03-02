@@ -4,4 +4,9 @@ public class Utils {
         InProgress,
         ToDo
     }
+    enum Priority{
+        Low,
+        Medium,
+        High,
+    }
 }
