@@ -35,7 +35,8 @@ public class Main {
                     int innerChoise;
                     while(true){
                         System.out.println("\nChossen Task: \n"+task);
-                        System.out.println("Menu:\n1- Edit title\n2- Edit Description\n3- Edit Status\n4- Back\n-- Enter your choice : \n");
+                        // TODO: edit print of menu. use a function called printMenuEditTask() and perform the readability
+                        System.out.println("Menu:\n1- Edit title\n2- Edit Description\n3- Edit Status\n4- Back\n5- Edit Priority\n-- Enter your choice : \n");
                         innerChoise = scanner.nextInt();
 //
                         switch (innerChoise){
@@ -61,6 +62,15 @@ public class Main {
                             case 4:
                                 System.out.println("\nBack...\n");
                                 break;
+                            case 5:
+                                System.out.println("1- Low / 2- Medium / 3- High\nEnter new status:\n");
+                                int priority = scanner.nextInt();
+                                switch (priority) {
+                                    // TODO: create a funtin in the Task class to setPriority and call it
+                                    case 1 -> task.priority = Utils.Priority.valueOf("Low");
+                                    case 2 -> task.priority = Utils.Priority.valueOf("Medium");
+                                    case 3 -> task.priority = Utils.Priority.valueOf("High");
+                                }
                             default:
                                 System.out.println("\nWrong number...\n");
                         }
