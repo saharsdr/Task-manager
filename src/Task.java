@@ -3,12 +3,22 @@ public class Task {
     String title = "";
     String description = "";
     Utils.Status status;
+    Utils.Priority priority;
+
+    public Task(int id, String title, String description, String status, String priority){
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = Utils.Status.valueOf(status);
+        this.priority = Utils.Priority.valueOf(status);
+    }
 
     public Task(int id, String title, String description, String status){
         this.id = id;
         this.title = title;
         this.description = description;
         this.status = Utils.Status.valueOf(status);
+        this.priority = Utils.Priority.Low;
     }
 
     public Task(String title, String description, String status){
@@ -17,6 +27,7 @@ public class Task {
         this.title = title;
         this.description = description;
         this.status = Utils.Status.valueOf(status);
+        this.priority = Utils.Priority.Low;
     }
 
     public Task(String title, String description){
@@ -25,7 +36,9 @@ public class Task {
         this.title = title;
         this.description = description;
         this.status = Utils.Status.ToDo;
+        this.priority = Utils.Priority.Low;
     }
+
 
     public Task(String title){
         this.id = Manager.ID;
@@ -33,6 +46,7 @@ public class Task {
         this.title = title;
         this.description = "";
         this.status = Utils.Status.ToDo;
+        this.priority = Utils.Priority.Low;
     }
 
     @Override
