@@ -26,7 +26,7 @@ public class TaskList {
                 }
                 Task task;
                 String[] taskAttr = line.split("[|]");
-                task=new Task(Integer.parseInt(taskAttr[0].strip()), taskAttr[1], taskAttr[2], taskAttr[3]);
+                task=new Task(Integer.parseInt(taskAttr[0].strip()), taskAttr[1], taskAttr[2], taskAttr[3], taskAttr[4]);
                 tasks.add(task);
             }
         } catch (IOException e) {
@@ -45,7 +45,7 @@ public class TaskList {
         tasks.add(task);
 
         try(FileWriter writer = new FileWriter(Manager.FILE_PATH, true)){
-            writer.write("\n"+task.id+"|"+task.title+"|"+task.description+"|"+task.status);
+            writer.write("\n"+task.id+"|"+task.title+"|"+task.description+"|"+task.status+"|"+task.priority);
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
