@@ -54,7 +54,9 @@ public class Task {
         String ans = "ID: -" + this.id + "-\n" +
                 "Title: " + this.title.toUpperCase() + "\n" +
                 "Description: **" + this.description + "**\n" +
-                "( " + this.status.toString().toLowerCase() + " )\n";
+                "( " + this.status.toString().toLowerCase() + " ) "+
+                "  ["+this.status.toString().toLowerCase() + "]"+
+                "\n";
         return ans;
     }
 
