@@ -55,6 +55,14 @@ public class TaskList {
             System.out.println(e.getMessage());
         }
     }
+    public void add(Task task){
+        this.tasks.add(task);
+        try(FileWriter writer = new FileWriter(Manager.FILE_PATH, true)){
+            writer.write("\n"+task.id+"|"+task.title+"|"+task.description+"|"+task.status+"|"+task.priority);
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+        }
+    }
 
     public boolean remove(int id){
         return tasks.removeIf(task -> task.id == id);
