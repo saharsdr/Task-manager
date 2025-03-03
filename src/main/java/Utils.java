@@ -1,12 +1,12 @@
 package main.java;
 
 public class Utils {
-    enum Status{
+    public enum Status{
         Done,
         InProgress,
         ToDo
     }
-    enum Priority{
+    public enum Priority{
         Low,
         Medium,
         High,
