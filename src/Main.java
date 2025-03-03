@@ -35,8 +35,7 @@ public class Main {
                     int innerChoise;
                     while(true){
                         System.out.println("\nChossen Task: \n"+task);
-                        // TODO: edit print of menu. use a function called printMenuEditTask() and perform the readability
-                        System.out.println("Menu:\n1- Edit title\n2- Edit Description\n3- Edit Status\n4- Back\n5- Edit Priority\n-- Enter your choice : \n");
+                        printMenuEditTask();
                         innerChoise = scanner.nextInt();
 //
                         switch (innerChoise){
@@ -60,9 +59,6 @@ public class Main {
                                 }
                                 break;
                             case 4:
-                                System.out.println("\nBack...\n");
-                                break;
-                            case 5:
                                 System.out.println("1- Low / 2- Medium / 3- High\nEnter new status:\n");
                                 int priority = scanner.nextInt();
                                 switch (priority) {
@@ -71,10 +67,14 @@ public class Main {
                                     case 2 -> task.priority = Utils.Priority.valueOf("Medium");
                                     case 3 -> task.priority = Utils.Priority.valueOf("High");
                                 }
+                                break;
+                            case 5:
+                                System.out.println("\nBack...\n");
+                                break;
                             default:
                                 System.out.println("\nWrong number...\n");
                         }
-                        if(innerChoise == 4){
+                        if(innerChoise == 5){
                             break;
                         }
                     }
@@ -99,11 +99,14 @@ public class Main {
                 break; // Exits while loop
             }
         }
-
-
-
-
-
-
+    }
+    static void printMenuEditTask(){
+        System.out.println("Menu:");
+        System.out.println("1- Edit title");
+        System.out.println("2- Edit Description");
+        System.out.println("3- Edit Status");
+        System.out.println("4- Edit Priority");
+        System.out.println("5- Back");
+        System.out.println("-- Enter your choice :");
     }
 }
