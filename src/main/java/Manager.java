@@ -1,3 +1,4 @@
+package main.java;
 
 public class Manager{
     public static final String FILE_PATH = "tasks.txt";
