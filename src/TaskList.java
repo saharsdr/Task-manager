@@ -76,4 +76,7 @@ public class TaskList {
     public int getSize(){
         return this.tasks.size();
     }
+    public List<Task> getTasks(){
+        return this.tasks;
+    }
 }

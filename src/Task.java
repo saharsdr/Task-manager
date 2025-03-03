@@ -73,4 +73,14 @@ public class Task {
     public Utils.Priority getPriority() {
         return this.priority;
     }
+    public int getId() {
+        return this.id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    public String getDescription() {
+        return description;
+    }
 }
