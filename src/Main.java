@@ -67,10 +67,9 @@ public class Main {
                                 System.out.println("1- Low / 2- Medium / 3- High\nEnter new status:\n");
                                 int priority = scanner.nextInt();
                                 switch (priority) {
-                                    // TODO: create a funtin in the Task class to setPriority and call it
-                                    case 1 -> task.priority = Utils.Priority.valueOf("Low");
-                                    case 2 -> task.priority = Utils.Priority.valueOf("Medium");
-                                    case 3 -> task.priority = Utils.Priority.valueOf("High");
+                                    case 1 -> task.setPriority("Low");
+                                    case 2 -> task.setPriority("Medium");
+                                    case 3 -> task.setPriority("High");
                                 }
                                 break;
                             case 5:
