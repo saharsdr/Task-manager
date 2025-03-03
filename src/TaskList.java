@@ -16,6 +16,10 @@ public class TaskList {
         tasks.forEach(System.out::println);
     }
 
+    public TaskList(List<Task> testTasks) {
+        this.tasks = testTasks;
+    }
+
     private List<Task> loadTasksFromFile() {
         List<Task> tasks = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(Manager.FILE_PATH))) {
@@ -67,5 +71,9 @@ public class TaskList {
 
     public void editTaskByTitle(int id, String newTitle) {
 
+    }
+
+    public int getSize(){
+        return this.tasks.size();
     }
 }
