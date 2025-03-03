@@ -10,7 +10,7 @@ public class Task {
         this.title = title;
         this.description = description;
         this.status = Utils.Status.valueOf(status);
-        this.priority = Utils.Priority.valueOf(status);
+        this.priority = Utils.Priority.valueOf(priority);
     }
 
     public Task(int id, String title, String description, String status){
