@@ -68,4 +68,11 @@ public class Task {
     public void setPriority(String priority) {
         this.priority = Utils.Priority.valueOf(priority);
     }
+
+    public Utils.Status getStatus() {
+        return this.status;
+    }
+    public Utils.Priority getPriority() {
+        return this.priority;
+    }
 }
