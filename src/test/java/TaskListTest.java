@@ -45,7 +45,7 @@ public class TaskListTest {
         List<Task> mockTasks = new ArrayList<>();
         TaskList testTaskList = new TaskList(mockTasks);
         Task task = new Task("test", "test");
-        testTaskList.add(task.getTitle(), task.getDescription());
+        testTaskList.add(task);
 
         assertEquals(task, testTaskList.getTask(task.getId()));
         assertNull(testTaskList.getTask(15));
