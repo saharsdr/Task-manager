@@ -10,7 +10,8 @@ public class Main {
             System.out.println("1- Add new TASK");
             System.out.println("2- Edit a TASK");
             System.out.println("3- Remove a TASK");
-            System.out.println("4- EXIT");
+            System.out.println("4- Print Tasks as priority");
+            System.out.println("5- EXIT");
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -94,13 +95,22 @@ public class Main {
                     System.out.println(tasks);
                     break;
                 case 4:
+                    System.out.println("Enter : 1- Low / 2- Medium / 3- High");
+                    int pr = scanner.nextInt();
+                    switch (pr){
+                        case 1 -> tasks.printGroupedByPriority("Low");
+                        case 2 -> tasks.printGroupedByPriority("Medium");
+                        case 3 -> tasks.printGroupedByPriority("High");
+                    }
+                    break;
+                case 5:
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Wrong number!\n");
 
             }
-            if (choice == 4) {
+            if (choice == 5) {
                 break; // Exits while loop
             }
         }
